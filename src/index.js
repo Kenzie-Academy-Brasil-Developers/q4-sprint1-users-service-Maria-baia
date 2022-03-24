@@ -38,7 +38,7 @@ const bodyValidate = (userSchema) => async (req, res, next) => {
   const data = req.body;
 
   try {
-    await usersSchema.validate(data);
+    await userSchema.validate(data);
     next();
   } catch (err) {
     res.status(422).json({ message: err.errors.join(", ") });
@@ -94,7 +94,7 @@ const verifyUserToChangePassword = (req, res, next) => {
 
 app.post(
   "/signup",
-  bodyVallidate(usersSchema),
+  bodyValidate(userSchema),
   usernameOrEmailAlreadyExists,
   async (req, res) => {
     try {

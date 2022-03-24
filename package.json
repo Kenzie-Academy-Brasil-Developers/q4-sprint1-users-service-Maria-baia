@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.0",
@@ -7,5 +10,8 @@
     "uuid": "^8.3.2",
     "yup": "^0.32.11"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
